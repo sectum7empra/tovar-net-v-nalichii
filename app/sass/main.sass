@@ -5,4 +5,65 @@
 
 // Пользовательские стили
 
+.header
+  position: relative
+
+  &:before
+    content: ""
+    display: block
+    width: 100%
+    height: 43px
+    background-color: $back
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    z-index: -1
+  & ul
+    margin: 0
+    padding: 0
+    list-style: none
+    overflow: hidden
+    & li
+      display: inline-block
+      margin-right: 25px
+      & a
+        font-size: 13px
+        color: $for-font
+  & .top-nav
+    display: inline-block
+    height: 43px
+    line-height: 43px
+  & .rus-ukr
+    display: inline-block
+    height: 43px
+    line-height: 43px
+    margin: auto 30px
+    & ul
+      & li
+        &:hover
+          border-bottom: 2px solid red
+          height: 43px
+          line-height: 43px
+
+  & .town-menu
+    display: inline-block
+    height: 43px
+    line-height: 43px
+    margin: auto 30px
+    & .your-town
+      position: absolute
+      background: none
+      text-transform: none
+      padding: 0
+      box-shadow: none
+      line-height: 43px
+      color: #333
+      font-size: 13px
+      &:before
+        content: "Your city: "
+        font-size: 13px
+        color: #333
+        margin-right: 30px
+
 @import "media" // Всегда в конце
