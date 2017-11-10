@@ -215,5 +215,258 @@
               float: right
 
 
+.breadcrumbs
+  nav
+    background: none
+    box-shadow: none
+    font-weight: 400
+    height: 50px
+    line-height: 50px
+    a
+      color: #999999
+      font-size: 13px
+      &:before
+        color: #999999
+        font-size: 13px
+        vertical-align: middle
+      &:last-child
+        color: #999999
+
+.tovar-area
+  h1
+    font-size: 30px
+    font-weight: bold
+  .little-img
+    .product-thumbnails
+      height: 200px
+      position: relative
+      list-style: none
+      li
+        float: left
+        width: 75px
+        height: 86px
+        text-align: center
+        margin-right: 5px
+        &:first-child
+          a
+          border: solid 1px #d1d1d1
+        &:nth-child(2)
+          a
+          border: solid 1px #d1d1d1
+        &:nth-child(3)
+          a
+            height: 75px
+            img
+              top: 0
+        a
+          display: block
+          width: 75px
+          height: 84px
+          &:hover
+            border: 1px solid $accent
+          img
+            display: inline
+            position: relative
+            top: 13px
+
+
+
+.shop-information
+  .out-now
+    display: inline-block
+    &:before
+      content: "Out now"
+      font-size: 13px
+      margin-right: 10px
+      font-weight: bold
+    li
+      font-size: 13px
+      color: $accent
+  .people-says
+    display: inline-block
+    margin-left: 10px
+    &:before
+      content: '\f0e5'
+      color: #777777
+      font-family: "FontAwesome"
+      font-size: 15px
+      margin-right: 3px
+    a
+      font-size: 13px
+      color: #777777
+      font-weight: bold
+      border-bottom: 0.5px solid #777777
+  .questions
+    display: inline-block
+    margin-left: 10px
+    &:before
+      content: '\f29c'
+      color: #777777
+      font-family: "FontAwesome"
+      font-size: 15px
+      margin-right: 3px
+    a
+      font-size: 13px
+      color: #777777
+      font-weight: bold
+      border-bottom: 0.5px solid #777777
+
+
+  .price-section
+    .card-panel
+      background-color: #f7f7f9
+      box-shadow: none
+      .price
+        color: #999999
+        font-size: 40px
+        font-weight: bold
+        sub
+          bottom: 0
+          font-size: 20px
+      .button
+        background: none
+        box-shadow: none
+        border: 2px solid red
+        color: #333333
+        font-size: 18px
+        font-weight: bold
+        text-transform: none
+        margin: 15px 0
+        &:hover
+          background: red
+          color: #ffffff
+      p
+        font-size: 12px
+        color: #777777
+      .bottom-area
+        .share
+          li
+            display: inline-block
+            &:before
+              content: '\f1e0'
+              font-size: 18px
+              color: #333333
+              font-family: "FontAwesome"
+              margin-right: 10px
+            &:last-child
+              margin-left: 30px
+              &:before
+                content: '\f24e'
+                font-size: 18px
+                color: #333333
+                font-family: "FontAwesome"
+                margin-right: 10px
+            a
+              color: #333333
+              font-size: 13px
+              font-weight: bold
+
+
+.list-of-products
+  .header
+    .angle-right, .angle-left
+      position: relative
+      color: #777777
+      cursor: pointer
+    .angle-left
+      right: -58px
+    .angle-right
+      left: 60px
+    .right-angle
+      display: inline-block
+      width: 25px
+      height: 25px
+      border-left: 1px solid #bfbfbf
+      border-bottom: 1px solid #bfbfbf
+      transform: rotate(43deg)
+    .left-angle
+      display: inline-block
+      width: 25px
+      height: 25px
+      border-right: 1px solid #e5e8e8
+      border-bottom: 1px solid #e5e8e8
+      transform: rotate(-43deg)
+    .btn-wrapper-on
+      display: inline-block
+      float: right
+      position: relative
+      top: -50px
+      right: 8vw
+    h2
+      font-size: 25px
+      font-weight: bold
+    &:before
+      background: none
+  .slider-area
+    .slick-slide
+      outline: none
+    .card
+      background: none
+      box-shadow: none
+      .card-image
+        position: relative
+        text-align: center
+        .discount
+          position: absolute
+          display: block
+          top: 0
+          background-color: #ff8941
+          padding: 4px
+          border-radius: 5px
+          font-size: 15px
+          font-weight: bold
+          color: #fff
+          left: -10px
+          z-index: 99
+
+      .card-content
+        padding: 0
+        margin-top: 10px
+        .code-prod
+          font-size: 10px
+          font-weight: 500
+          display: inline-block
+          color: #777
+        .in-stock
+          font-size: 12px
+          font-weight: 500
+          display: inline-block
+          color: darkgreen
+          margin-left: 20px
+          &:before
+            content: '\e876'
+            font-size: 13px
+            font-family: "Material Icons"
+            vertical-align: sub
+            margin-right: 3px
+        .card-title
+          display: block
+          line-height: 20px
+          color: #333
+          font-size: 16px
+          font-weight: bold
+          margin: 10px 0
+        .price
+          display: inline-block
+          color: #333333
+          font-size: 25px
+          font-weight: bold
+          sub
+            font-size: 14px
+            bottom: 0
+        .big-price
+          display: inline-block
+          font-size: 16px
+          color: #ff8941
+          text-decoration: line-through
+          margin-left: 10px
+          font-weight: bold
+          sub
+            bottom: 0
+            font-size: 12px
+
+
+
+
 
 @import "media"
