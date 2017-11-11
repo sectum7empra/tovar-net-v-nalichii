@@ -369,23 +369,40 @@
       color: #777777
       cursor: pointer
     .angle-left
-      right: -58px
+      right: -60px
     .angle-right
       left: 60px
     .right-angle
       display: inline-block
-      width: 25px
-      height: 25px
-      border-left: 1px solid #bfbfbf
-      border-bottom: 1px solid #bfbfbf
-      transform: rotate(43deg)
+      width: 30px
+      height: 30px
+      background-color: #3c3f43
+      text-align: center
+      &:hover
+        background-color: #474a4e
+      &:before
+        position: absolute
+        content: '\f104'
+        font-family: FontAwesome
+        font-size: 15px
+        color: #ffffff
+        top: 3px
+        left: 12px
     .left-angle
       display: inline-block
-      width: 25px
-      height: 25px
-      border-right: 1px solid #e5e8e8
-      border-bottom: 1px solid #e5e8e8
-      transform: rotate(-43deg)
+      width: 30px
+      height: 30px
+      background-color: #3c3f43
+      text-align: center
+      &:hover
+        background-color: #474a4e
+      &:before
+        position: absolute
+        content: '\f105'
+        font-family: FontAwesome
+        font-size: 15px
+        color: #ffffff
+        top: 3px
     .btn-wrapper-on
       display: inline-block
       float: right
@@ -432,7 +449,7 @@
           font-weight: 500
           display: inline-block
           color: darkgreen
-          margin-left: 20px
+          margin-left: 10px
           &:before
             content: '\e876'
             font-size: 13px
@@ -465,8 +482,284 @@
             bottom: 0
             font-size: 12px
 
+.tabs-content
+  .tabs
+    border-bottom: 1px solid #e9eaeb
+    .tab
+      a
+        color: #777777
+        font-weight: bold
+        font-size: 16px
+        text-transform: none
+      a.active, a:hover
+        color: #fb2539
+    .indicator
+      background-color: #fb2539
+  #test1
+    h3
+      font-weight: bold
+      font-size: 20px
+    table>tbody>tr>td
+      padding-left: 20px
+      font-size: 13px
+      font-weight: 700
+    #show_more[data-event=true] tr:nth-child(1n+7)
+      display: none
+    button.showmore
+      background: none
+      box-shadow: none
+      border: none
+      color: #333333
+      font-size: 13px
+      font-weight: 600
+      border-bottom: 1px solid #333333
+      padding: 0
+      &:before
+        content: '\f107'
+        font-family: FontAwesome
+        color: #fb2539
+        font-size: 14px
+        margin-right: 10px
+    #show_more[data-event=true]
+     &+button.showmore:after
+        content: "Show more"
+    #show_more
+      &+button.showmore:after
+        content: "Show less"
+  #test2
+    p
+      font-size: 13px
+      font-weight: 600
+.product-description
+  margin-top: 40px
+  h3
+    font-weight: 700
+    font-size: 20px
+  p
+    font-size: 13px
+    font-weight: 600
+  div[data-event=true] p:nth-child(1n+3)
+    display: none
+  button.showmore
+    background: none
+    box-shadow: none
+    border: none
+    color: #333333
+    font-size: 13px
+    font-weight: 600
+    border-bottom: 1px solid #333333
+    padding: 0
+    &:before
+      content: '\f107'
+      font-family: FontAwesome
+      color: #fb2539
+      font-size: 14px
+      margin-right: 10px
+
+.testimonials
+  button.showmore
+    background: none
+    box-shadow: none
+    border: none
+    color: #333333
+    font-size: 13px
+    font-weight: 600
+    border-bottom: 1px solid #333333
+    padding: 0
+    &:before
+      content: '\f107'
+      font-family: FontAwesome
+      color: #fb2539
+      font-size: 14px
+      margin-right: 10px
+  a.button
+    background: 0 0
+    -webkit-box-shadow: none
+    box-shadow: none
+    border: 2px solid red
+    color: #333
+    font-size: 13px
+    font-weight: 700
+    text-transform: none
+    margin: 15px 0
+    float: left
+    &:hover
+      background: red
+      color: #fff
+  a.button-yellow
+    background: $accent
+    -webkit-box-shadow: none
+    box-shadow: none
+    color: #333
+    font-size: 13px
+    font-weight: 700
+    text-transform: none
+    margin: 15px 0
+    float: right
+.card
+  box-shadow: none
+  border: 1px solid $accent
+  padding: 10px
+  h4
+    font-size: 15px
+    font-weight: bold
+    display: inline-block
+  .date
+    display: inline-block
+    font-size: 13px
+    color: #999999
+    margin-left: 20px
+  p
+    font-size: 13px
+    font-weight: 600
+    .advantages
+      color: green
+      margin-right: 20px
+    .disadvantages
+      color: red
+      margin-right: 20px
+  .testimonials-down
+    font-size: 13px
+    font-weight: bold
+    border-bottom: 1px solid #999
+    color: #333333
+    &:last-child
+      margin-left: 35px
+  .spaner
+    margin: 15px 0
+    float: left
+    display: inline-block
+  .good-span
+    margin: 15px 0
+    float: right
+    display: inline-block
+    p
+      display: inline-block
+      font-size: 13px
+      font-weight: 600
+    a
+      display: inline-block
+      margin: 0 5px
+      color: #333333
+      i
+        font-size: 19px
+        margin-right: 5px
+        color: #333333
+    .like
+      color: green
+      font-size: 13px
+      font-weight: bold
+    .dislike
+      color: red
+      font-size: 13px
+      font-weight: bold
+.rating
+  font-size: 13px
+  li
+    color: $accent
+    margin-right: 5px
+  .mark-total
+    font-size: 13px
+    font-weight: bold
+
+.reviewed-products
+  h2
+    font-size: 25px
+    font-weight: 700
+    display: inline-block
+    &:before
+      display: none
+  .showmore
+    display: inline-block
+    background: none
+    box-shadow: none
+    border: none
+    color: #333333
+    font-size: 13px
+    font-weight: 600
+    border-bottom: 1px solid #333333
+    padding: 0
+    margin-left: 30px
+    &:after
+      content: '\f105'
+      font-family: FontAwesome
+      color: #fb2539
+      font-size: 14px
+      margin-left: 10px
+.card
+  border: 1px solid #eff0f3
+  .card-image
+    margin-bottom: 15px
+  .card-content
+    padding: 0
+    .card-title
+      font-size: 13px
+      font-weight: bold
+      line-height: 17px
+    .in-stock
+      color: #57ae85
+      font-size: 12px
+      font-weight: 500
+      &:before
+        content: '\e876'
+        font-size: 13px
+        font-family: "Material Icons"
+        vertical-align: sub
+        margin-right: 3px
+    .price
+      color: #333333
+      font-weight: bold
+      font-size: 25px
+      sub
+        bottom: 0
+    .btn
+      background-color: #fb2539
+      color: #ffffff
+      text-transform: none
+      font-size: 13px
+      font-weight: 700
+      box-shadow: none
+      &:hover
+        background-color: $accent
+    img
+      display: inline-block
+      vertical-align: middle
+      margin-left: 15px
+    .down-area
+      ul
+        li
+          margin-right: 0
+        span
+          color: #777777
+          font-weight: 400
+          border-bottom: 1px solid #777777
+          margin-left: 5px
+          &:before
+            content: '\e253'
+            font-family: "Material Icons"
+            font-size: 15px
+            color: #777777
+            margin-right: 3px
+            vertical-align: middle
 
 
-
+.footer
+  background-color: #474a4e
+  .content
+    .forphone
+      display: block
+    .social li
+      display: inline-block
+      margin-right: 5px
+    .social li .fa
+      display: inline-block
+      width: 35px
+      height: 35px
+      line-height: 35px
+      border: 1px solid red
+      border-radius: 20px
+      background-color: #ff6782
+      color: red
+      text-align: center
 
 @import "media"
