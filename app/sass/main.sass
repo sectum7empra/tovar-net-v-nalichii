@@ -112,7 +112,7 @@
               background: none
           a.dropdown-button
             color: #333333
-            font-size: 18px
+            font-size: 15px
             font-weight: bold
             padding: 0
             i
@@ -130,6 +130,8 @@
             padding: 0 8px
             span
               color: #333333
+              display: block
+              margin-top: 15px
             &:before
               content: ""
               background-image: url("../img/garag.png")
@@ -137,12 +139,14 @@
               width: 27px
               height: 26px
               position: absolute
-              top: 20px
+              top: 35px
               left: 13px
           a.before-icons2
             padding: 0 8px
             span
               color: #333333
+              display: block
+              margin-top: 15px
             &:before
               content: ""
               background-image: url("../img/heart.png")
@@ -150,12 +154,14 @@
               width: 33px
               height: 26px
               position: absolute
-              top: 20px
+              top: 35px
               left: 13px
           a.before-icons3
             padding: 0 8px
             span
               color: #333333
+              display: block
+              margin-top: 15px
             &:before
               content: ""
               background-image: url("../img/vaga.png")
@@ -163,12 +169,14 @@
               width: 32px
               height: 23px
               position: absolute
-              top: 20px
+              top: 35px
               left: 10px
           a.before-icons4
             padding: 0 8px
             span
               color: #333333
+              display: block
+              margin-top: 15px
             &:before
               content: ""
               background-image: url("../img/telega.png")
@@ -176,13 +184,18 @@
               width: 30px
               height: 27px
               position: absolute
-              top: 20px
+              top: 35px
               left: 10px
   .sub-menu
     width: 100%
     background-color: $color-2
     line-height: 55px
     height: 55px
+    ul#sub-drop
+      li
+        width: 100%
+        a
+          color: #333
     ul
       li
         margin-right: 0
@@ -596,28 +609,28 @@
     text-transform: none
     margin: 15px 0
     float: right
-.card
-  box-shadow: none
-  border: 1px solid $accent
-  padding: 10px
-  h4
-    font-size: 15px
-    font-weight: bold
-    display: inline-block
-  .date
-    display: inline-block
-    font-size: 13px
-    color: #999999
-    margin-left: 20px
-  p
-    font-size: 13px
-    font-weight: 600
-    .advantages
-      color: green
-      margin-right: 20px
-    .disadvantages
-      color: red
-      margin-right: 20px
+  .card
+    box-shadow: none
+    border: 1px solid $accent
+    padding: 10px
+    h4
+      font-size: 15px
+      font-weight: bold
+      display: inline-block
+    .date
+      display: inline-block
+      font-size: 13px
+      color: #999999
+      margin-left: 20px
+    p
+      font-size: 13px
+      font-weight: 600
+      .advantages
+        color: green
+        margin-right: 20px
+      .disadvantages
+        color: red
+        margin-right: 20px
   .testimonials-down
     font-size: 13px
     font-weight: bold
@@ -686,80 +699,173 @@
       color: #fb2539
       font-size: 14px
       margin-left: 10px
-.card
-  border: 1px solid #eff0f3
-  .card-image
-    margin-bottom: 15px
-  .card-content
-    padding: 0
-    .card-title
-      font-size: 13px
-      font-weight: bold
-      line-height: 17px
-    .in-stock
-      color: #57ae85
-      font-size: 12px
-      font-weight: 500
-      &:before
-        content: '\e876'
+  .card
+    border: 1px solid #eff0f3
+    box-shadow: none
+    .card-image
+      margin-bottom: 15px
+    .card-content
+      padding: 0
+      .card-title
         font-size: 13px
-        font-family: "Material Icons"
-        vertical-align: sub
-        margin-right: 3px
-    .price
-      color: #333333
-      font-weight: bold
-      font-size: 25px
-      sub
-        bottom: 0
-    .btn
-      background-color: #fb2539
-      color: #ffffff
-      text-transform: none
-      font-size: 13px
-      font-weight: 700
-      box-shadow: none
-      &:hover
-        background-color: $accent
-    img
-      display: inline-block
-      vertical-align: middle
-      margin-left: 15px
-    .down-area
-      ul
-        li
-          margin-right: 0
-        span
-          color: #777777
-          font-weight: 400
-          border-bottom: 1px solid #777777
-          margin-left: 5px
-          &:before
-            content: '\e253'
-            font-family: "Material Icons"
-            font-size: 15px
+        font-weight: bold
+        line-height: 17px
+      .in-stock
+        color: #57ae85
+        font-size: 12px
+        font-weight: 500
+        &:before
+          content: '\e876'
+          font-size: 13px
+          font-family: "Material Icons"
+          vertical-align: sub
+          margin-right: 3px
+      .price
+        color: #333333
+        font-weight: bold
+        font-size: 25px
+        sub
+          bottom: 0
+      .btn
+        background-color: #fb2539
+        color: #ffffff
+        text-transform: none
+        font-size: 13px
+        font-weight: 700
+        box-shadow: none
+        &:hover
+          background-color: $accent
+      img
+        display: inline-block
+        vertical-align: middle
+        margin-left: 15px
+      .down-area
+        ul
+          li
+            margin-right: 0
+          span
             color: #777777
-            margin-right: 3px
-            vertical-align: middle
+            font-weight: 400
+            border-bottom: 1px solid #777777
+            margin-left: 5px
+            &:before
+              content: '\e253'
+              font-family: "Material Icons"
+              font-size: 15px
+              color: #777777
+              margin-right: 3px
+              vertical-align: middle
+  .slick-initialized
+    .slick-slide
+      outline: none
+
 
 
 .footer
-  background-color: #474a4e
+  position: relative
+  &:before
+    content: ''
+    background-color: #474a4e
+    height: 100%
+    width: 75%
+    left: 0
+    top: 0
+    bottom: 0
+    position: absolute
+    z-index: -1
+  &:after
+    content: ''
+    background-color: #3c3f43
+    height: 100%
+    width: 25%
+    right: 0
+    top: 0
+    bottom: 0
+    position: absolute
+    z-index: -1
   .content
-    .forphone
-      display: block
-    .social li
-      display: inline-block
-      margin-right: 5px
-    .social li .fa
-      display: inline-block
-      width: 35px
-      height: 35px
-      line-height: 35px
-      border: 1px solid red
-      border-radius: 20px
-      background-color: #ff6782
-      color: red
-      text-align: center
+    .section
+      padding-top: 35px
+      font-size: 13px
+      font-weight: bold
+      line-height: 119%
+      margin: .5rem 0 .4rem
+      color: #c8c9ca
+      padding-bottom: 0
+    .link
+      padding: 0
+      li
+        a
+          color: #919295
+          font-size: 12px
+          font-weight: 600
+    .contact
+      padding-top: 35px
+      padding-right: 0
+      padding-left: 25px
+      .phone
+        line-height: 119%
+        margin: .5rem 0 .4rem
+        display: block
+        padding-bottom: 12px
+        a
+          font-size: 13px
+          font-weight: bold
+          color: #c8c9ca
+      .forphone
+        display: block
+        font-size: 11px
+        color: #919295
+      .watch-us
+        display: block
+        font-size: 12px
+        color: #c8c9ca
+        padding-top: 30px
+      .social li
+        display: inline-block
+        &:first-child
+          .fa
+            border: 1px solid #3e6296
+            color: #3e6296
+        &:nth-child(2)
+          .fa
+            border: 1px solid #944742
+            color: #944742
+        &:nth-child(3)
+          .fa
+            border: 1px solid #00acec
+            color: #00acec
+        &:nth-child(4)
+          .fa
+            border: 1px solid #e35358
+            color: #e35358
+        &:nth-child(5)
+          .fa
+            border: 1px solid #4a709b
+            color: #4a709b
+        &:nth-child(6)
+          .fa
+            border: 1px solid #a96042
+            color: #a96042
+        .fa
+          display: inline-block
+          width: 35px
+          height: 35px
+          line-height: 35px
+          border: 1px solid red
+          border-radius: 20px
+          background: none
+          color: red
+          text-align: center
+    .copyright
+      padding: 25px 0
+      border-top: 1px solid #595c5f
+      width: 75%
+      .name
+        color: #7f8183
+        font-size: 13px
+        .turum
+          color: #dadbdc
+          font-weight: bold
 
 @import "media"
